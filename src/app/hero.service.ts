@@ -9,6 +9,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 private heroesUrl = 'api/heroes';  // URL to web api
 
+httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable({ providedIn: 'root' })
 export class HeroService {
   /** Log a HeroService message with the MessageService */
