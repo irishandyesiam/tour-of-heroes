@@ -38,6 +38,13 @@ getHero(id: number): Observable<Hero> {
   );
 }
 
+save(): void {
+  if (this.hero) {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+}
+
 /**
  * Handle Http operation that failed.
  * Let the app continue.
